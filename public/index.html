@@ -6,22 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
     <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Snowpack App</title>
   </head>
   <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <nav>
+      <span>
+        <button class="btnControl" id="btnStart">▶</button>
+        <button class="btnControl">🗚</button>
+        <button class="btnControl">🗛</button>
+        <button class="btnControl">⏪</button>
+        <button class="btnControl">⏩</button>
+        <button class="btnControl" id="btnFlipX">↔️</button>
+      </span>
+      <span>
+        <progress id="progressStatus" value="0" max="100"></progress>
+      </span>
+    </nav>
+    <main>
+      <textarea id="teleprompter" contenteditable="true">
+Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ac turpis egestas integer eget. Habitant morbi tristique senectus et netus et malesuada fames ac. 
+
+Quis viverra nibh cras pulvinar mattis nunc sed blandit. Sed velit dignissim sodales ut eu sem integer vitae. 
+Justo nec ultrices dui sapien eget mi proin sed libero. Posuere sollicitudin aliquam ultrices sagittis. 
+Nunc sed blandit libero volutpat sed cras. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh.
+
+Tempor orci eu lobortis elementum. Praesent elementum facilisis leo vel fringilla est.
+Et tortor at risus viverra adipiscing at.
+Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. 
+
+Sodales ut etiam sit amet.
+      </textarea>
+    </main>
     <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
