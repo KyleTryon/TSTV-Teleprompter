@@ -1,0 +1,123 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  display: block;
+  background-color: #000;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  min-height: 100px;
+  width: 100%;
+  align-items: center;
+}
+
+nav span {
+  flex: 1
+}
+
+.btnControl {
+  font-size: 1em;
+  line-height: 0.2em;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(64, 53, 90);
+  color: white;
+  height: 1em;
+  padding: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer
+}
+
+.flipX {
+  transform: scaleX(-1);
+  direction: rtl;
+  text-align: left;
+}
+
+#teleprompter {
+  display: block;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  font-size: 4em;
+  line-height: 1.5em;
+  padding: 1em;
+  border: none;
+  color: white;
+  background-color: #000;
+  overflow-y: scroll;
+  resize: none;
+}
+
+#teleprompter[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+#progressStatus {
+  text-align: right;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f00;
+}
+
+progress {
+  border: none;
+  width: 50%;
+  max-width: 350px;
+  height: 1em;
+  background: #f00;
+}
+
+progress::-webkit-progress-value {
+  background: red;
+}
+
+progress::-webkit-progress-bar {
+  background: #292929;
+}
