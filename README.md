@@ -5,5 +5,4 @@ A simple dependency-free Typescript Teleprompter application. Bluetooth enabled 
 ![TSTV Teleprompter preview image](./.github/img/frame_generic_light.png)
 
 ## To Do
-- [ ] Adjustable Sizes
 - [ ] Bluetooth controller

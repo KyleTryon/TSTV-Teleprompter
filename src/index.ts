@@ -1,5 +1,5 @@
 export {}
-const script = document.getElementById('teleprompter') as Element
+const script = document.getElementById('teleprompter') as HTMLInputElement
 const startButton = document.getElementById("btnStart")as Element
 const progressElement = document.getElementById("progressStatus")as HTMLInputElement
 let scrollHeight: number;
@@ -11,6 +11,8 @@ let scrollLoop: number;
 let isStarted: boolean = false;
 //Add Event Listeners
 (document.getElementById("btnFlipX")as Element).addEventListener("click", flipX);
+(document.getElementById("btnSizeUp")as Element).addEventListener("click", () => {changeSize(4)});
+(document.getElementById("btnSizeDown")as Element).addEventListener("click", () => {changeSize(-4)});
 (document.getElementById("btnSpeedUp")as Element).addEventListener("click", () => {changeSpeed(1)});
 (document.getElementById("btnSpeedDown")as Element).addEventListener("click", () => {changeSpeed(-1)});
 startButton.addEventListener("click", startScroll);
@@ -56,4 +58,9 @@ function changeSpeed(amount: number) {
   if ( amount + currentSpeed > minSpeed && amount + currentSpeed < maxSpeed ) {
     currentSpeed += amount
   }
+}
+
+function changeSize(amount: number) {
+  const currentSize = parseInt(window.getComputedStyle(script).fontSize, 10)
+  script.style.fontSize = (currentSize + amount) + "px"
 }
