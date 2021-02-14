@@ -34,13 +34,19 @@ nav {
   display: flex;
   flex-direction: row;
   padding: 1em;
-  min-height: 100px;
+  min-height: 80px;
   width: 100%;
   align-items: center;
 }
 
 nav span {
-  flex: 1
+  flex: 1;
+  display: flex;
+  min-height: 48px;
+  min-width: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .btnControl {
@@ -54,7 +60,8 @@ nav span {
   padding: 1.5em;
   text-align: center;
   text-decoration: none;
-  cursor: pointer
+  cursor: pointer;
+  margin: 0 0.2em;
 }
 
 .flipX {
@@ -120,4 +127,10 @@ progress::-webkit-progress-value {
 
 progress::-webkit-progress-bar {
   background: #292929;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
 }
