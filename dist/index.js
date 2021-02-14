@@ -4,9 +4,17 @@ const progressElement = document.getElementById("progressStatus");
 let scrollHeight;
 let currentPos;
 let currentSpeed = 2;
+let maxSpeed = 25;
+let minSpeed = -10;
 let scrollLoop;
 let isStarted = false;
 document.getElementById("btnFlipX").addEventListener("click", flipX);
+document.getElementById("btnSpeedUp").addEventListener("click", () => {
+  changeSpeed(1);
+});
+document.getElementById("btnSpeedDown").addEventListener("click", () => {
+  changeSpeed(-1);
+});
 startButton.addEventListener("click", startScroll);
 script.addEventListener("scroll", updateProgressBar);
 function flipX() {
@@ -39,4 +47,10 @@ function updateProgressBar() {
   scrollHeight = script.scrollHeight;
   const amount = Math.floor((currentPos + script.clientHeight) / scrollHeight * 100);
   progressElement.value = amount.toString();
+}
+function changeSpeed(amount) {
+  console.log("Changing Speed");
+  if (amount + currentSpeed > minSpeed && amount + currentSpeed < maxSpeed) {
+    currentSpeed += amount;
+  }
 }
