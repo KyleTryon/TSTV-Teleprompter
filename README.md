@@ -6,6 +6,4 @@ A simple dependency-free Typescript Teleprompter application. Bluetooth enabled 
 
 ## To Do
 - [ ] Adjustable Sizes
-- [ ] Adjustable Speed
-- [ ] Reversable Speed
 - [ ] Bluetooth controller
