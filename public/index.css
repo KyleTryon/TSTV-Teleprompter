@@ -51,17 +51,15 @@ nav span {
 
 .btnControl {
   font-size: 1em;
-  line-height: 0.2em;
   border: none;
   border-radius: 6px;
   background-color: rgb(64, 53, 90);
-  color: white;
-  height: 1em;
-  padding: 1.5em;
+  padding: 0.5em 0.8em;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   margin: 0 0.2em;
+  fill: #FFF;
 }
 
 .flipX {
