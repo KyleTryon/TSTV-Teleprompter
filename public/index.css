@@ -33,9 +33,9 @@ main {
 nav {
   display: flex;
   flex-direction: column;
-  padding: 1em;
   width: 100%;
   align-items: center;
+  padding-top: 0.5em;
 }
 
 nav span {
