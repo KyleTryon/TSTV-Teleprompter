@@ -9,6 +9,12 @@ let minSpeed = -10;
 let scrollLoop;
 let isStarted = false;
 document.getElementById("btnFlipX").addEventListener("click", flipX);
+document.getElementById("btnSizeUp").addEventListener("click", () => {
+  changeSize(4);
+});
+document.getElementById("btnSizeDown").addEventListener("click", () => {
+  changeSize(-4);
+});
 document.getElementById("btnSpeedUp").addEventListener("click", () => {
   changeSpeed(1);
 });
@@ -53,4 +59,8 @@ function changeSpeed(amount) {
   if (amount + currentSpeed > minSpeed && amount + currentSpeed < maxSpeed) {
     currentSpeed += amount;
   }
+}
+function changeSize(amount) {
+  const currentSize = parseInt(window.getComputedStyle(script).fontSize, 10);
+  script.style.fontSize = currentSize + amount + "px";
 }
