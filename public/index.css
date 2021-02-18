@@ -31,18 +31,37 @@ main {
 }
 
 nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
   width: 100%;
-  padding-top: 0.5em;
 }
 
 nav div {
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#controlRow {
+  margin: 0.5em;
 }
 
 .controls {
-  display: inline-block;
-  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.controlsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-grow: 1;
+  max-width: 24em;
 }
 
 .btnControl {
@@ -55,13 +74,11 @@ nav div {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  margin: 0 0.2em;
   fill: #FFF;
 }
 
 #btnGitHub {
-  float: right;
-  margin-right: 10px;
+  justify-self: end;
 }
 
 .flipX {
